@@ -10,7 +10,7 @@ Browser alert berisi "XSS!" muncul. \
 `<img src="x" onerror="alert('XSS via img!')">` \
 Browser alert berisi "XSS via img!" muncul. \
 <br />
-![eksperimen2](screenshots/Eksperimen%202/2.png)
+![eksperimen2](screenshots/Eksperimen%202/2.png) \
 <br />
 HTML memiliki event hook bawaan yang secara implisit mengeksekusi JavaScript. \
 `onerror`, `onclick`, `onload`, dan sebagainya adalah titik eksekusi JavaScript.
